@@ -1,0 +1,113 @@
+<html>
+    <head><title>Reserva tu hotel online</title>
+        <style type="text/css">
+
+   * {   /*Definimos globalmente 0 pixeles para margin y padding a todos los elementos*/
+    margin: 0px;
+    padding: 0px;
+   }
+   
+
+   #menu { /*Definimos estilos al contenedor desplegable*/
+    margin:auto;
+    font-family:Arial, Helvetica, sans-serif; 
+   }
+   
+
+
+   ul, ol {  /*Le quitamos a las listas los estilos, para referirse a las listas "ul, ol"*/
+    list-style:none;
+   }
+   
+
+   .nav li a {/*Todos los elementos "a" que estén dentro de "li", dentro "nav" tendrán las siguientes propiedades*/
+   color:white;
+    text-decoration:none;
+    padding:10px 50px; /*El primero es para altura, y el segundo anchura*/
+    display:block; /*Esto es debido a que los elementos "a" están en linea y se sobreponen, con esto todos se combinan para formar un bloque*/ 
+   
+   }
+   .nav{
+   position:relative;
+    top: 10px;
+    left: 180px; 
+   }
+
+
+    .nav > li { /*Esto es para decir que todos los "li" que estén directamente dentro del nav se alineen horizontalmente, o sea los "li" primordiales, los que están dentro del primer "ul"*/
+    float:left;
+   }
+   
+
+   .nav li a:hover {/*Todos los "a" que estén dentro de un "li" se iluminarán con color cuando pasemos el puntero (hover)*/
+    background-color:#434343;
+   }
+   
+   .nav li ul {/*Todos los "ul" dentro del primer "li" desapareceran, es decir, todos los submenús desapareceran (display:none)*/
+    display:none;
+    position:absolute; /*Acá se restringe que no crezcan mucho los submenús*/
+    min-width:140px;
+    padding:0 0px;
+   }
+
+   
+   .nav li:hover > ul { /*Todos los "li" dentro de un "nav" mostrarán sus "ul", o sea, todos los "li" mostrarán los submenús*/
+    display:block; /*Esto para que los muestre en bloques*/
+   }
+   
+
+   .nav li ul li { /*Todos los "li" dentro de un "ul", dentro de otro "li", es decir los submenús, tomarán la propiedad de posición relativa, con esto podrán ser modificados*/
+    position:relative;
+   }
+   
+
+   .nav li ul li ul  {   /*Acá los ubicamos a la derecha (right) a posición de -140 pixeles, es para cuando hayan más de 1 submenú*/
+    right:-140px;
+    top:0px;
+   }
+   
+  </style>
+
+
+    </head>
+    <body>
+        <div id ="contenedor">
+            <div id ="cabecera"><h1><font face="Comic Sans MS,arial,verdana">Reservaonline.com</font></h1></div>
+            <div id ="menu">
+                <center>
+                   
+                  <ul class="nav">
+<li><a target="_blank" href="hotel.php">Hoteles</a></li>
+
+<li><a href="">Reservaciones</a>
+  <ul> 
+     <li><a href="reservaciones/reservar persona.php">reservar</a></li> 
+     <li><a href="reservaciones/mostrar persona.php">mostrar</a></li>   
+  </ul>
+</li>
+<li><a href="">Empleados</a>
+ <ul>
+     <li><a href="empleados.php">Mostrar empleados</a></li>
+     <li><a href="cargoempleados.php">Cargo de empleados</a></li>
+     <li><a href="registrarempleado.php">Registrar</a></li>
+</ul>
+</li>
+
+<li><a href="">Cliente</a>
+<ul>
+     <li><a href="registrarse.php">registrarse</a></li> 
+     <li><a href="mostrarcliente.php">mostrar clientes</a></li>
+</ul>
+</li>
+<!-- Acá termina el desplegable --> 
+
+                 </center> 
+             </div>
+            <div id ="derecha">
+            
+            </div>
+            <div id ="pie"><center><font color="white"><br></br>Desarrollada por</font> <font color="white">Steve Montiel Ochoa</font></center>
+            </div>
+        </div>
+    </body>
+</html>
