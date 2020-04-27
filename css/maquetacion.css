@@ -1,0 +1,27 @@
+#contenedor{
+        background-color:#BA0C0C;
+        border:0px solid white;
+        width:100%;
+        margin:0 auto;
+        overflow-x: hidden; 
+}
+#cabecera{  
+        background-color:#BA0C0C;  
+        height:8%;
+}  
+#menu{  
+        height:10%;
+         background-color:black; 
+}  
+#derecha{  
+        height:90%;
+        background:url("../imagenes/vacaciones.jpg"); 
+        background-attachment: fixed;
+        background-size: cover; 
+        
+}  
+#pie{  
+        height:15%;
+        background-color:black;  
+        clear:both;  
+}

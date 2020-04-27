@@ -1,5 +1,11 @@
+<?php
+include("conexion.php");
+?>
 <html>
     <head><title>Reserva tu hotel online</title>
+      
+      <link rel="stylesheet" href="css/maquetacion.css"/>
+
         <style type="text/css">
 
    * {   /*Definimos globalmente 0 pixeles para margin y padding a todos los elementos*/
